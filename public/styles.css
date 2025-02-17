@@ -1,0 +1,12 @@
+body {
+  background-color: #f4f4f4;
+}
+
+h1 {
+  color: darkblue;
+  margin-top: 50px;
+}
+
+#messages {
+  margin-top: 20px;
+}
