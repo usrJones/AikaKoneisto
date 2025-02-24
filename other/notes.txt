@@ -1,0 +1,15 @@
+npm init
+
+npm install express --save
+
+npm install cors
+
+npm i -D nodemon
+
+-- start and leave the 3000 backend running
+npm run dev
+
+npm create vue@latest
+
+-- cd into client, start and leave the front end running 
+npm run dev
