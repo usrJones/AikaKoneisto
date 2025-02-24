@@ -1,2 +1,10 @@
-/client
 node_modules
+package.json
+package-lock.json
+.git
+.gitignore
+
+/client/node_modules
+/client/package.json
+/client/package-lock.json
+/client/.vscode
