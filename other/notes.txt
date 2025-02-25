@@ -13,3 +13,11 @@ npm create vue@latest
 
 -- cd into client, start and leave the front end running 
 npm run dev
+
+-- check database status
+systemctl status mariadb
+systemctl start mariadb -- start if stopped
+systemctl enable mariadb -- enable if disabled
+
+-- execute from file
+mysql -u root -p < ~/dev/AikaKoneisto/database/scriptlet.sql
