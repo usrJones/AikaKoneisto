@@ -6,14 +6,14 @@ const app = express();
 // middleware
 app.use(cors());
 
-const route = require('./routes/main');
+const status = require('./routes/status');
 
-app.use('/main', route);
+app.use('/status', status);
 
 app.listen(3000, () => {
     console.log("yes 3000")
 })
 
 app.get("/", (req, res) => {
-    res.send("ah")
+    res.send("nothing to see here")
 })
