@@ -2,7 +2,6 @@
   "name": "aikakoneisto",
   "version": "1.0.0",
   "description": "Tekstiä",
-  "___COMMENT":"sam told me to use type: module in here because he wanted to use ES modules",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
