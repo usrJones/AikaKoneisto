@@ -21,3 +21,6 @@ systemctl enable mariadb -- enable if disabled
 
 -- execute from file
 mysql -u root -p < ~/dev/AikaKoneisto/database/scriptlet.sql
+
+-- install mysql2 pack
+npm i mysql2
