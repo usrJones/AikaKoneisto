@@ -1,5 +1,3 @@
-//import mysql from 'mysql2'
-//import dotenv from 'dotenv'
 const mysql = require("mysql2")
 const dotenv = require("dotenv")
 dotenv.config()
@@ -12,20 +10,20 @@ const pool = mysql.createPool ({
 }).promise()
 
 async function getTaskRows() {
-    const [rows] = await pool.query("select ID, created_timestamp, start_timestamp, end_timestamp, hour_amount, task, project from task_rows")
+    const [rows] = await pool.query("select * from task_rows")
     return rows
 }
-module.exports = getTaskRows
-/*
+exports.getTaskRows = getTaskRows;
+
 async function getTaskRow(id) {
     const [rows] = await pool.query(`
-        select ID, created_timestamp, start_timestamp, end_timestamp, hour_amount, task, project 
+        select *
         from task_rows
         where ID = ?
     `, [id])
     return rows[0]
 }
-module.exports = getTaskRow
+exports.getTaskRow = getTaskRow;
 
 async function createTaskRow(created_timestamp, start_timestamp, end_timestamp, hour_amount, task, project){
     const [result] = await pool.query(`
@@ -35,9 +33,7 @@ async function createTaskRow(created_timestamp, start_timestamp, end_timestamp, 
     const id = result.insertId
     return getTaskRow(id)
 }
-module.exports = createTaskRow
+exports.createTaskRow = createTaskRow;
 
 //const result = await createTaskRow('2025-02-24 14:00:00','2025-02-24 14:00:00','2025-02-24 14:30:00',0.5,'testi','testi')
-//console.log(result)*/
-
-/**hep */
+//console.log(result)
