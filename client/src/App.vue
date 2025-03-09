@@ -6,7 +6,7 @@ import mainDowner from './components/mainDowner.vue'
 <template>
   <header>
     <div class="wrapper">
-      <mainUpper msg="Tähän tulee lomake" />
+      <mainUpper msg="Uusi tuntimerkintä" />
     </div>
   </header>
 
