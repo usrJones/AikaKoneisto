@@ -6,14 +6,19 @@ import mainDowner from './components/mainDowner.vue'
 <template>
   <header>
     <div class="wrapper">
-      <mainUpper msg="Boksi ylhäällä" />
+      <mainUpper msg="Tähän tulee lomake" />
     </div>
   </header>
 
   <main>
-    <mainDowner msg="Boksi alhaalla" />
+    <mainDowner msg="Tuntimerkinnät" />
   </main>
 </template>
+
+
+
+
+
 
 <style scoped>
 header {

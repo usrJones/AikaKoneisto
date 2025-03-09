@@ -1,3 +1,27 @@
+<script setup>
+import dayjs from 'dayjs';
+
+defineProps({
+  task: {
+    type: Object,
+    required: true,
+  },
+});
+</script>
+
+<template>
+  <div class="item">
+    <div class="details">
+      <h3>
+        <slot name="heading"></slot>
+      </h3>
+      <p>{{ task.project }}</p>
+      <p>{{ dayjs(task.start_timestamp).format('HH:mm') }} - {{ dayjs(task.end_timestamp).format('HH:mm') }}</p>
+    </div>
+  </div>
+</template>
+
+<!--
 <template>
   <div class="item">yks tämmönen juttu
     <div class="details">ja sen hommat
@@ -8,6 +32,11 @@
     </div>
   </div>
 </template>
+-->
+
+
+
+
 
 <style scoped>
 .item {
