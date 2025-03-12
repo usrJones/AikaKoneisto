@@ -7,6 +7,11 @@ const task = ref('');
 const project = ref('');
 const createdTimestamp = ref(new Date().toISOString());
 
+function formatDateTime(datetime) {
+  const date = new Date(datetime);
+  return date.toISOString().slice(0, 19).replace('T', ' ');
+}
+
 function calculateHourAmount(start, end) {
   if (!end) return null;
   const startDate = new Date(start);
@@ -16,16 +21,35 @@ function calculateHourAmount(start, end) {
   return diffHrs.toFixed(2);
 }
 
-function submitForm() {
+async function submitForm() {
   const hourAmount = calculateHourAmount(startTimestamp.value, endTimestamp.value);
-  console.log('Form submitted with data:', {
-    created_timestamp: createdTimestamp.value,
-    start_timestamp: startTimestamp.value,
-    end_timestamp: endTimestamp.value,
+  const data = {
+    created_timestamp: formatDateTime(createdTimestamp.value),
+    start_timestamp: formatDateTime(startTimestamp.value),
+    end_timestamp: formatDateTime(endTimestamp.value),
     hour_amount: hourAmount,
     task: task.value,
     project: project.value,
-  });
+  };
+  
+  try {
+    const response = await fetch('http://localhost:3000/taskRow', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+    
+    if (response.ok) {
+      const result = await response.json();
+      console.log('Form submitted successfully:', result);
+    } else {
+      console.error('Form submission failed:', response.statusText);
+    }
+  } catch (error) {
+    console.error('Error submitting form:', error);
+  }
 }
 
 defineProps({
@@ -33,7 +57,7 @@ defineProps({
     type: String,
     required: true,
   },
-})
+});
 </script>
 
 <template>
@@ -62,6 +86,10 @@ defineProps({
     </form>
   </div>
 </template>
+
+
+
+
 
 <style scoped>
 .form-container {
