@@ -119,7 +119,6 @@ form {
   width: 100%;
   padding: 8px;
   box-sizing: border-box;
-  color: #cccccc;
 }
 
 .form-row {
