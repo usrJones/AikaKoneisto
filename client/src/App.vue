@@ -1,6 +1,6 @@
 <script setup>
-import mainUpper from './components/mainUpper.vue'
-import mainDowner from './components/mainDowner.vue'
+import art1 from './components/art1.vue'
+import art2 from './components/art2.vue'
 </script>
 
 <template>
@@ -12,10 +12,10 @@ import mainDowner from './components/mainDowner.vue'
   <main>
     <section>
       <article class="art1-green"><!-- #1 green -->
-        <mainUpper msg="Uusi tuntimerkintä" />
+        <art1 msg="Artikkeli 1" />
       </article>
       <article class="art2-blue"><!-- #2 blue -->
-        <mainDowner msg="Tuntimerkinnät" />
+        <art2 msg="Artikkeli 2" />
       </article>
       <article class="art3-yellow"><!-- #3 yellow -->
         <h1>artikkeli 3</h1>
