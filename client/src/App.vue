@@ -5,14 +5,30 @@ import mainDowner from './components/mainDowner.vue'
 
 <template>
   <header>
-    <div class="wrapper">
-      <mainUpper msg="Uusi tuntimerkintä" />
-    </div>
+      <h1>Aika koneisto</h1>
+      <nav></nav>
   </header>
-
+  
   <main>
-    <mainDowner msg="Tuntimerkinnät" />
+    <section>
+      <article class="art1-green"><!-- #1 green -->
+        <mainUpper msg="Uusi tuntimerkintä" />
+      </article>
+      <article class="art2-blue"><!-- #2 blue -->
+        <mainDowner msg="Tuntimerkinnät" />
+      </article>
+      <article class="art3-yellow"><!-- #3 yellow -->
+        <h1>artikkeli 3</h1>
+      </article>
+      <article class="art4-orange"><!-- #4 orange -->
+        <h1>artikkeli 4</h1>
+      </article>
+    </section>
   </main>
+  
+  <footer>
+
+  </footer>
 </template>
 
 
@@ -21,7 +37,7 @@ import mainDowner from './components/mainDowner.vue'
 
 
 <style scoped>
-header {
+/*header {
   line-height: 1.5;
 }
 
@@ -41,5 +57,5 @@ header {
     place-items: flex-start;
     flex-wrap: wrap;
   }
-}
+}*/
 </style>

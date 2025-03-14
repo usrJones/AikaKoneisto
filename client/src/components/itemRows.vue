@@ -39,7 +39,7 @@ defineProps({
 
 
 <style scoped>
-.item {
+/*.item {
   margin-top: 2rem;
   display: flex;
   position: relative;
@@ -109,5 +109,5 @@ h3 {
   .item:last-of-type:after {
     display: none;
   }
-}
+}*/
 </style>

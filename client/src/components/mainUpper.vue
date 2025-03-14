@@ -61,16 +61,16 @@ defineProps({
 </script>
 
 <template>
-  <div class="greetings"><h1 class="green">{{ msg }}</h1><h3>Tämmönen teksti tässä</h3></div>
+  <div class="greetings"><h1 class="green">{{ msg }}</h1></div>
   <div class="form-container">
     <form @submit.prevent="submitForm">
       <div class="form-group">
         <label for="task">Task:</label>
-        <input id="task" v-model="task" type="text" required />
+        <input id="task" v-model="task" type="text" placeholder="Kirjoita tehtävä" required />
       </div>
       <div class="form-group">
         <label for="project">Project:</label>
-        <input id="project" v-model="project" type="text" required />
+        <input id="project" v-model="project" type="text" placeholder="Kirjoita projekti" required />
       </div>
       <div class="form-row">
         <div class="form-group">
@@ -92,7 +92,7 @@ defineProps({
 
 
 <style scoped>
-.form-container {
+/*.form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,5 +148,5 @@ button {
 
 button:hover {
   background-color: #45a049;
-}
+}*/
 </style>
