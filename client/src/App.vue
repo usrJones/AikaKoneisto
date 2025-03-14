@@ -12,7 +12,7 @@ import art4 from './components/art4.vue'
   </header>
   
   <main>
-    <section>
+    <section class="grid-container">
       <article class="art1-green"><!-- #1 green -->
         <art1 msg="Artikkeli 1" />
       </article>

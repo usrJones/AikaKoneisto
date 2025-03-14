@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-    <h3><slot name="heading"></slot></h3>
-    <p>{{ task.project }}</p>
-    <p>{{ dayjs(task.start_timestamp).format('HH:mm') }} - {{ dayjs(task.end_timestamp).format('HH:mm') }}</p>
+    <p>({{ task.project }})
+    <slot name="heading"></slot>
+    &mdash;&nbsp;{{ dayjs(task.start_timestamp).format('HH:mm') }} - {{ dayjs(task.end_timestamp).format('HH:mm') }}</p>
 </template>
