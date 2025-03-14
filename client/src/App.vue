@@ -1,6 +1,8 @@
 <script setup>
 import art1 from './components/art1.vue'
 import art2 from './components/art2.vue'
+import art3 from './components/art3.vue'
+import art4 from './components/art4.vue'
 </script>
 
 <template>
@@ -18,44 +20,13 @@ import art2 from './components/art2.vue'
         <art2 msg="Artikkeli 2" />
       </article>
       <article class="art3-yellow"><!-- #3 yellow -->
-        <h1>artikkeli 3</h1>
+        <art3 msg="Artikkeli 3" />
       </article>
       <article class="art4-orange"><!-- #4 orange -->
-        <h1>artikkeli 4</h1>
+        <art4 msg="Artikkeli 4" />
       </article>
     </section>
   </main>
   
-  <footer>
-
-  </footer>
+  <footer></footer>
 </template>
-
-
-
-
-
-
-<style scoped>
-/*header {
-  line-height: 1.5;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}*/
-</style>

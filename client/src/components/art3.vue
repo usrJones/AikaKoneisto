@@ -1,17 +1,17 @@
 <script setup>
-import submitForm from './form.vue';
+import timer from './timer.vue';
 
 defineProps({
   msg: {
     type: String,
     required: true,
   },
-});
+})
 </script>
 
 <template>
-  <div class="form-container">
+  <div class="timer-container">
   <div class="container-heading"><h1>{{ msg }}</h1></div>
-      <submitForm />
+      <timer />
   </div>
 </template>

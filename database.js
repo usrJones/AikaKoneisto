@@ -26,7 +26,7 @@ const pool = mysql.createPool ({
 async function getTaskRows() {
     const [rows] = await pool.query(`
         select id, created_timestamp, start_timestamp, end_timestamp, hour_amount, task, project
-        from task_rows limit 2
+        from task_rows order by id desc limit 2
     `)
     return rows
 }

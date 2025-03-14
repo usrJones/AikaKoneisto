@@ -1,17 +1,16 @@
 <script setup>
-import submitForm from './form.vue';
 
 defineProps({
   msg: {
     type: String,
     required: true,
   },
-});
+})
 </script>
 
 <template>
-  <div class="form-container">
+  <div class="shit-container">
   <div class="container-heading"><h1>{{ msg }}</h1></div>
-      <submitForm />
+      <p>Tähän tulee jottai paskkoo</p>
   </div>
 </template>
