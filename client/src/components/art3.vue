@@ -11,7 +11,7 @@ defineProps({
 
 <template>
   <div class="timer-container">
-  <div class="container-heading"><h1>{{ msg }}</h1></div>
+  <div class="container-heading"><h2>{{ msg }}</h2></div>
       <timer />
   </div>
 </template>

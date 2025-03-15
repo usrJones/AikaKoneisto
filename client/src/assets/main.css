@@ -1,21 +1,25 @@
 h1 {
   padding: 0px;
   margin: 0px;
+  color: #364F6B;
 }
 
 h2 {
   padding: 0px;
   margin: 0px;
+  color: #364F6B;
 }
 
 h3 {
   padding: 0px;
   margin: 0px;
+  color: #364F6B;
 }
 
 p {
   padding: 0px;
   margin: 0px;
+  color: #252A34;
 }
 
 
@@ -24,22 +28,19 @@ p {
 
 #app {
   padding: 2px;
-  background: blue;
 }
 
 header {
   padding: 2px;
-  background: magenta;
 }
 
-      nav {background: black;}
+      nav {padding:0px;}
 
 main {
   padding: 5px;
-  background: rgb(255, 0, 191);
 }
 
-      section {background: black;}
+      section {color:rgb(17, 16, 17);}
       .grid-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -48,33 +49,24 @@ main {
         align-items: center;
       }
 
-            article {padding: 10px; background: black;}
+            article {
+              padding: 10px;
+              background: #eaeaea;
+            }
 
-            .container-heading {background: gray;}
+            .container-heading {padding:0px;}
 
-                  .art1-green {background: green;}
-                  .form-container {
-                    border: 1px dashed darkslategray;
-                    background: #f8f8f8;
-                  }
+                  .art1-green {color:rgb(17, 16, 17);}
+                  .form-container {color:rgb(17, 16, 17);}
 
-                  .art2-blue {background: blue;}
-                  .item-container {
-                    border: 1px dashed darkslategray;
-                    background: #f8f8f8;
-                  }
+                  .art2-blue {color:rgb(17, 16, 17);}
+                  .item-container {color:rgb(17, 16, 17);}
 
-                  .art3-yellow {background: yellow;}
-                  .timer-container {
-                    border: 1px dashed darkslategray;
-                    background: #f8f8f8;
-                  }
+                  .art3-yellow {color:rgb(17, 16, 17);}
+                  .timer-container {color:rgb(17, 16, 17);}
 
-                  .art4-orange {background: orange;}
-                  .shit-container {
-                    border: 1px dashed darkslategray;
-                    background: #f8f8f8;
-                  }
+                  .art4-orange {color:rgb(17, 16, 17);}
+                  .chart-container {color:rgb(17, 16, 17);}
 
 @media (max-width: 600px) {
   .grid-container {
