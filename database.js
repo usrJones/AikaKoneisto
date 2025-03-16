@@ -51,7 +51,7 @@ async function createTaskRow(created_timestamp, start_timestamp, end_timestamp, 
         values (?,?,?,?,?,?)
     `, [created_timestamp, start_timestamp, end_timestamp, hour_amount, task, project])
     const id = result.insertId
-    return getTaskRow(id)
+    return getTaskRows(id)
 }
 exports.createTaskRow = createTaskRow;
 
