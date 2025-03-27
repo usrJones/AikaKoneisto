@@ -2,11 +2,13 @@
 import { ref, computed } from 'vue'
 import artMain from './components/artMain.vue'
 import register from './components/register.vue';
+import login from './components/login.vue';
 import notFound from './components/notFound.vue';
 
 const routes = {
   '/': artMain,
-  '/register': register
+  '/register': register,
+  '/login': login
 }
 
 const currentPath = ref(window.location.hash)
@@ -25,7 +27,8 @@ const currentView = computed(() => {
       <h1>Aika koneisto</h1>
       <nav>
         <a href="#/">Koti</a> |
-        <a href="#/register">Rekisteröidy</a>
+        <a href="#/register">Rekisteröidy</a> |
+        <a href="#/login">Kirjaudu</a>
       </nav>
   </header>
   
