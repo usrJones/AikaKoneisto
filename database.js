@@ -58,3 +58,17 @@ exports.createTaskRow = createTaskRow;
 // Insert manually some hard coded values into table task_rows
 //const result = await createTaskRow('2025-02-24 14:00:00','2025-02-24 14:00:00','2025-02-24 14:30:00',0.5,'testi','testi')
 //console.log(result)
+
+async function loginAttempt(email) {
+    const [rows] = await pool.query("select password_hash from users where email = ?", [email])
+    const password_hash = rows[0].password_hash;
+    return password_hash
+}
+exports.loginAttempt = loginAttempt;
+
+async function firstLogin(email) {
+    const [rows] = await pool.query("select force_pw_reset from users where email = ?", [email])
+    const isFirstLogin = rows[0].force_pw_reset
+    return isFirstLogin
+}
+exports.firstLogin = firstLogin;
